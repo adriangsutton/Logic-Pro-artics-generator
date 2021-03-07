@@ -11,15 +11,28 @@ Usage (with the input CSV file in the same directory as this python script): ./c
 You can also omit the csvFile name on the commandline IF that csv file is specifically `named "artics.csv", i.e. just run ./csvtoartics.py
 
 The expected CSV columns are as follows:
+========================================
 Articulation name
 Channel (1-16) (N.B. this is 1-based, not 0-based)
 Articulation Symbol name, e.g. 'staccato', corresponding to the name of Logic's symbols for these things in its own articulation editor
+
 Input (type, e.g. Note On, Program etc.)
 Selector (the first MIDI data byte.. e.g. the note number if a note)
 Value Start (the lowest value of the second MIDI data byte, e.g. velocity if a note)
 Value End (the highest value of the second MIDI data byte, e.g. velocity if a note)
 Mode (Permanent, Momentary etc.)
-Output (type e.g. Note On, Program etc.)
+
+Output 1 (type e.g. Note On, Program etc.)
+Channel (1-16)
+Selector (the first MIDI data byte.. e.g. the note number if a note)
+Value (the second MIDI data byte, e.g. velocity if a note)
+
+Output 2 (type e.g. Note On, Program etc.)
+Channel (1-16)
+Selector (the first MIDI data byte.. e.g. the note number if a note)
+Value (the second MIDI data byte, e.g. velocity if a note)
+
+Output 3 (type e.g. Note On, Program etc.)
 Channel (1-16)
 Selector (the first MIDI data byte.. e.g. the note number if a note)
 Value (the second MIDI data byte, e.g. velocity if a note)
